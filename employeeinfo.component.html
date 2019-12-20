@@ -1,0 +1,49 @@
+<p>employeeinfo works!</p>
+<div>
+    <nav>
+    <button (click)="addStudent()">Add Employee</button>
+    <button (click)="showEmployee()">Show EmployeeList</button>
+</nav>
+<div *ngIf="showempDiv"> 
+    <h4>Employee Details</h4>
+
+    <table border="10px">
+      <thead>
+          <tr>
+          <th>EmpId</th>
+          <th>EmpName</th>
+          <th>Emplastname</th>
+          <th>EmpEmailid</th>
+          <th>Empcontact</th>
+          <th>EmpAdhar</th>
+          <th>Emplastname</th>
+          <th>EmpPan</th>
+          <th>EmpSalary</th> 
+          <th>Empdob</th> 
+          <th>EmpjoinDate</th> 
+          <th>Edit</th> 
+          <th>Delete</th>   
+        </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let s of emparray">
+            <td>{{s.employeeId}}</td>
+            <td>{{s.employeeFirstName}}</td>
+            <td>{{s.employeeLastName}}</td>
+            <td>{{s.employeeEmailId}}</td>
+            <td>{{s.employeeContact}}</td>
+            <td>{{s.employeeAadharNo}}</td>
+            <td>{{s.employeePanNo}}</td>
+            <td>{{s.employeeSalary}}</td>
+            <td>{{s.employeeDob}}</td>
+            <td>{{s.employeeJoiningDate}}</td>
+            <td>{{s.employeeSalary}}</td>
+            <td><button (click)="editEmp(s)">Edit</button> </td>
+            <td><button (click)="deleteEmp(s.sid)">Delete</button> </td>
+          </tr>
+        </tbody>
+    </table>
+ 
+</div>
+
+
